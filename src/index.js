@@ -12,7 +12,7 @@ app.set("view engine", "ejs");
 app.use(routerPath);
 app.use(express.static(join(__dirname, "public")));
 
-const PORT = 3000;
+const PORT = process.env.PORT;
 
 app.listen(PORT, () => {
   console.log(`escuchando en el puerto ${PORT}`);
